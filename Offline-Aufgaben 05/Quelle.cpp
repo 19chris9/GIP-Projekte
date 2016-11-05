@@ -6,6 +6,7 @@ void a1();
 void a2();
 void a3();
 void a4();
+void a5();
 
 int main()
 {	
@@ -13,6 +14,7 @@ int main()
 	//a2();
 	//a3();
 	//a4();
+	//a5();
 
 	system("PAUSE");
 	return(0);
@@ -129,4 +131,28 @@ void a4()
 		}
 		cout << "Der doppelte Wert betraegt: " << ausgabe << endl;
 	}
+}
+
+void a5()
+{
+	int a[5];
+
+	for (int i = 1; i <= 5; i++)
+	{
+		cout << "Bitte geben Sie die " << i << ". Zahl ein: ? ";
+		cin >> a[i - 1];
+	}
+
+	int indexklein = 1, indexgross = 1;
+	for (int i = 1; i <= 5; i++)
+	{
+		if (a[i - 1] < a[indexklein - 1]) {
+			indexklein = i;
+		}
+		else if (a[i - 1] > a[indexgross - 1]) {
+			indexgross = i;
+		}
+	}
+	cout << "Die " << indexklein << ". Zahl war die kleinste der eingegebenen Zahlen und lautet: " << a[indexklein - 1] << endl;
+	cout << "Die " << indexgross << ". Zahl war die groesste der eingegebenen Zahlen und lautet: " << a[indexgross - 1] << endl;
 }
