@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+void a1();
+
+int main()
+{
+	a1();
+
+	system("PAUSE");
+	return(0);
+}
+
+void a1()
+{
+	string eingabe;
+		cout << "Text = ?";
+		cin >> eingabe;
+		bool repeat = false;
+		do {
+			repeat = false;
+			for (int i = 0; i < eingabe.length() && repeat == false; i++) {
+				if ((!(int(eingabe.at(i)) >= int('a') && int(eingabe.at(i)) <= int('z'))) | (!(int(eingabe.at(i)) >= int('A') && int(eingabe.at(i)) <= int('Z')))) {
+					repeat = true;
+				}
+				}
+			} while (repeat = true);
+		}
