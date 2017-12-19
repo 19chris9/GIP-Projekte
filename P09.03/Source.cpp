@@ -15,13 +15,13 @@ int zeichenkette_suchen(char* text, char* zkette)
 			counter = i;
 			for (int z = 0; z < 20; z++)
 			{
-				if (text[i + z] != zkette[z])
-					break;
 				if (zkette[z] == '\0')
 				{
 					enthalten = true;
 					break;
 				}
+				if (text[i + z] != zkette[z])
+					break;
 			}
 		}
 	}
